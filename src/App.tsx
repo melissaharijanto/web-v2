@@ -1,11 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import WelcomePage from './pages/WelcomePage';
+import ContentPage from './pages/ContentPage';
 
 function App() {
   return (
+    <>
     <WelcomePage/>
+    <ContentPage/>
+    </>
   );
 }
 
