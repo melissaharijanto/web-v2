@@ -45,6 +45,21 @@ export const tech_projects: TechProject[] = [{
     type: "individual project",
     image: GameRoom,
 }, {
+    name: "travelLog",
+    desc: "travel itinerary planning android application",
+    duration: "may 2022 - aug 2022",
+    contribution: ["frontend dev", "google maps api integration", "firebase & firestore integration", "unit testing", "ui/ux design"],
+    role: "full-stack developer",
+    tech_stack: ["react native", "javascript", "firebase", "google maps api", "react native testing library", "jest"],
+    github: "https://github.com/melissaharijanto/Travel-Log", 
+    docs: "https://melissaharijanto.github.io/Travel-Log/",
+    backend: null, // use backend and frontend instead of github if two different repos
+    frontend: null, 
+    type: "team project",
+    image: TravelLog,
+}]
+
+export const other_projects = [{
     name: "track-o",
     contribution: [`frontend dev with javafx`, `implement edit, list, find functionalities with java`, `documentation`],
     desc: "order and inventory tracking application",
@@ -57,17 +72,4 @@ export const tech_projects: TechProject[] = [{
     frontend: null, 
     type: "team project",
     image: TrackO,
-}, {
-    name: "travel log",
-    desc: "travel itinerary planning android application",
-    duration: "may 2022 - aug 2022",
-    contribution: ["frontend dev", "google maps api integration", "firebase & firestore integration", "unit testing", "ui/ux design"],
-    role: "full-stack developer",
-    tech_stack: ["react native", "javascript", "firebase", "google maps api", "react native testing library", "jest"],
-    github: "https://github.com/melissaharijanto/Travel-Log", 
-    docs: "https://melissaharijanto.github.io/Travel-Log/",
-    backend: null, // use backend and frontend instead of github if two different repos
-    frontend: null, 
-    type: "team project",
-    image: TravelLog,
 }]

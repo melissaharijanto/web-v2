@@ -12,7 +12,7 @@ const ProfileContainer = styled.div<{
 }>`
     background: linear-gradient(${Colors.purple}, transparent);
     border-radius: 20px;
-    padding: 2em 3em 2em 3em;
+    padding: 4em 5em 4em 5em;
     margin-top: 2em;
     margin-bottom: 2em;
     margin-left: ${(props) => (props.marginLeft ? props.marginLeft : '2em')};
@@ -57,7 +57,7 @@ const Profile = () => {
     return (
         <ProfileContainer marginLeft="1em">
             <TextDiv>
-                <BoldText fontSize="2.5em">profile</BoldText>
+                <BoldText fontSize="2.5em">about</BoldText>
             </TextDiv>
             <TextDiv />
             <TextDiv>
@@ -65,11 +65,13 @@ const Profile = () => {
                     marginBottom="0.25em"
                     fontSize="3.5em"
                     color={Colors.yellow}>
-                    melissa anastasia harijanto
+                    good to see you here.
                 </BoldText>
-                <SemiBoldText marginBottom="1em" fontSize="1.25em">
-                    nus computer science undergraduate ; web & frontend dev
-                    enthusiast
+                <SemiBoldText marginBottom="1em" fontSize="1em" lineHeight="1.5" textAlign="justify">
+                    my name is melissa, and my passion for web development started when i learnt basic HTML and CSS when i was 14,
+                    driven by my hobby of graphic design. afterwards, i learnt that web development involves more
+                    than just designing, but it only increases my enthusiasm in it as there is so much to learn. 
+                    i enjoy applying the things i learnt to the projects i make or participate in.
                 </SemiBoldText>
                 <SemiBoldText fontSize="1.25em">
                     <SemiBoldText

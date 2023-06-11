@@ -4,10 +4,8 @@ import { Colors } from "../constants/colors";
 import Profile from "../components/Profile";
 import { BoldText } from "../components/TextComponents";
 
-const ContentGrid = styled.div`
-    display: grid;
-    grid-template-columns: 2fr 8fr;
-    width: 100%;
+const ContentDiv = styled.div`
+    width: 85%;
 `
 
 const ProfileContainer = styled.div<{marginLeft?: string ; marginRight?: string}>`
@@ -33,14 +31,9 @@ const ContentPage = () => {
     
     return (
         <IntroAndProjects>
-            <ContentGrid>
-                <ProfileContainer marginRight="1em">
-                    <TextDiv>
-                        <BoldText fontSize="1.25em">you are now viewing:</BoldText>
-                    </TextDiv>
-                </ProfileContainer>
+            <ContentDiv>
                 <Profile/>
-            </ContentGrid>
+            </ContentDiv>
         </IntroAndProjects>
     )
 }
