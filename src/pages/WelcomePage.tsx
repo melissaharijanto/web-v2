@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Colors } from '../constants/colors';
 import { WelcomePageBackground } from '../components/Background';
 import { toLinkedIn, toResume } from '../constants/links';
+import { SemiBoldText } from '../components/TextComponents';
+import { SPACER } from '../constants/constants';
 
 const WelcomeText = styled.span`
     font-family: 'Metropolis-Bold', 'sans-serif';
@@ -12,24 +14,24 @@ const WelcomeText = styled.span`
 
 const Container = styled.div`
     background: linear-gradient(${Colors.blue_50} 10%, transparent 90%);
-    padding: 2em;
+    padding: 3em;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 `;
 
 const Text = styled.span`
     font-family: 'Metropolis-SemiBold', 'sans-serif';
     color: ${Colors.white};
-    font-size: 1.5em;
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
 `;
 
 const LineBreak = styled.div`
     padding: 0.5em;
-`;
-
-const LeftAlignedText = styled.div`
-    text-align: left;
-    display: flex;
-    flex-direction: column;
 `;
 
 const WhiteHorizontalLine = styled.hr`
@@ -38,7 +40,7 @@ const WhiteHorizontalLine = styled.hr`
     color: ${Colors.white};
     height: 1px;
     border: 0;
-    margin-left: 0;
+    // margin-left: 0;
     margin-top: 1em;
     margin-bottom: 1em;
 `;
@@ -54,7 +56,7 @@ const Button = styled.button<{ backgroundColor?: string }>`
     border: 2px solid ${Colors.white};
     padding: 0.5em 0.875em 0.5em 0.875em;
     border-radius: 10px;
-    font-size: 1.25em;
+    font-size: 1em;
 
     :hover {
         background: linear-gradient(${Colors.black_50}, transparent);
@@ -63,33 +65,26 @@ const Button = styled.button<{ backgroundColor?: string }>`
 
 const Grid = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 90%;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
 `;
 
 const WelcomePage = () => {
     return (
         <WelcomePageBackground>
             <Container>
-                <LeftAlignedText>
-                    <WelcomeText>welcome.</WelcomeText>
-                    <LineBreak />
-                    <Text>you are now viewing</Text>
-                    <Text>melissa's portfolio website.</Text>
-                    <WhiteHorizontalLine />
-                    <Grid>
-                        <div>
-                            <Button onClick={toLinkedIn}>linkedin</Button>
-                        </div>
-                        <div>
-                            <Button
-                                backgroundColor={Colors.yellow_75}
-                                onClick={toResume}>
-                                resume
-                            </Button>
-                        </div>
-                    </Grid>
-                </LeftAlignedText>
+                <SemiBoldText marginBottom='0.5em' fontSize='1.25em'>
+                    hello! i am
+                </SemiBoldText>
+                <WelcomeText>
+                    melissa anastasia harijanto
+                </WelcomeText>
+                <WhiteHorizontalLine/>
+                <SemiBoldText>
+                    nus computer science undergraduate{SPACER}frontend & web dev enthusiast
+                </SemiBoldText>
             </Container>
         </WelcomePageBackground>
     );

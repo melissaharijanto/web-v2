@@ -8,6 +8,8 @@ export const SemiBoldText = styled.span<{
     marginBottom?: string;
     hover?: boolean;
     hoverColor?: string;
+    lineHeight?: string;
+    textAlign?: string;
 }>`
     font-family: ${(props) =>
         props.italic
@@ -17,6 +19,8 @@ export const SemiBoldText = styled.span<{
     font-size: ${(props) => (props.fontSize ? props.fontSize : '1em')};
     margin-bottom: ${(props) =>
         props.marginBottom ? props.marginBottom : '0'};
+    line-height: ${props => props.lineHeight ? props.lineHeight : "normal"} !important;
+    text-align: ${props => props.textAlign ? props.textAlign : "left"}
 
     :hover {
         color: ${(props) =>
