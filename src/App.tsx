@@ -1,12 +1,14 @@
 import './App.css';
 import WelcomePage from './pages/WelcomePage';
-import ContentPage from './pages/ContentPage';
+import ExperiencePage from './pages/ExperiencePage';
+import IntroAndProjectsPage from './pages/IntroAndProjectsPage';
 
 function App() {
     return (
         <>
             <WelcomePage />
-            <ContentPage />
+            <IntroAndProjectsPage />
+            <ExperiencePage />
         </>
     );
 }
