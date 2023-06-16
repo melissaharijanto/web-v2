@@ -3,6 +3,7 @@ import { Colors } from "../constants/colors";
 import { TechProject } from "../constants/tech-projects";
 import { BoldText, SemiBoldText } from "./TextComponents";
 import { EN_SPACER, SPACER } from "../constants/constants";
+import { redirect } from "../constants/utils";
 
 const ProjectContainer = styled.div`
     background: linear-gradient(${Colors.pink_75}, transparent);
@@ -31,10 +32,6 @@ const TextDiv = styled.div<{flexDirection?: string ; alignItems? : string}>`
     align-items: ${props => props.alignItems? props.alignItems : "flex-start"};
 `
 const ProjectComponent = ({project} : {project: TechProject}) => {
-
-    const redirect = (link : string) => {
-        window.open(link);
-    } 
 
     const frontendExists = project.frontend != null
     const backendExists = project.backend != null
@@ -92,7 +89,7 @@ const ProjectComponent = ({project} : {project: TechProject}) => {
                 <SemiBoldText italic marginBottom="0.5em">{EN_SPACER}( {project.duration} )</SemiBoldText>
             </TextDiv>
             <SemiBoldText marginBottom="0.5em">{project.type.concat(SPACER).concat(project.role)}</SemiBoldText>
-            <SemiBoldText> links:{EN_SPACER}
+            <SemiBoldText marginBottom="0.5em"> links:{EN_SPACER}
                 {
                     frontendAndBackendOnly
                     ?  <FrontendAndBackendOnlyComponent/>
