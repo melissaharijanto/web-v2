@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Colors } from '../constants/colors';
 import Links from './Links';
-import { NORMAL_SPACE } from '../constants/constants';
 import ProjectTab from './ProjectTab';
 import { useState } from 'react';
 import MainTechProjects from './tech-projects/MainTechProjects';
@@ -9,7 +8,6 @@ import OtherTechProjects from './tech-projects/OtherTechProjects';
 import { SemiBoldText } from './TextComponents';
 import ProjectViewNote from './ProjectViewNote';
 import GraphicsGrid from './design-projects/GraphicsGrid';
-import { toBehance } from '../constants/links';
 
 export const Container = styled.div<{
     marginLeft?: string;
@@ -21,7 +19,7 @@ export const Container = styled.div<{
             ? `linear-gradient(${props.gradientColor}, transparent)`
             : `linear-gradient(${Colors.purple}, transparent)`};
     border-radius: 20px;
-    padding: 4em 5em 4em 5em;
+    padding: 4em 5em 8em 5em;
     margin-top: 2em;
     margin-bottom: 2em;
     margin-left: ${(props) => (props.marginLeft ? props.marginLeft : '2em')};
@@ -124,22 +122,7 @@ const Profile = () => {
 
             {designSelected ? (
                 graphicsSelected ? (
-                    <>
-                        <SemiBoldText
-                            textAlign="right"
-                            marginBottom="1em"
-                            fontSize="1.25em">
-                            <SemiBoldText>view in{NORMAL_SPACE}</SemiBoldText>
-                            <SemiBoldText
-                                hover
-                                hoverColor={Colors.blue_75}
-                                color={Colors.blue}
-                                onClick={toBehance}>
-                                behance
-                            </SemiBoldText>
-                        </SemiBoldText>
-                        <GraphicsGrid />
-                    </>
+                    <GraphicsGrid />
                 ) : figmaSelected ? (
                     <SemiBoldText>coming soon</SemiBoldText>
                 ) : null
