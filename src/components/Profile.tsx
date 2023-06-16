@@ -73,29 +73,39 @@ const Profile = () => {
                 setViewTechProjects={selectViewTechProjects}
                 setViewDesignProjects={selectViewDesignProjects}
             />
-            <TextDiv>
-                <ProjectTab
-                    mainSelected={mainSelected}
-                    otherSelected={otherSelected}
-                    selectMainProjects={selectMainProjects}
-                    selectOtherProjects={selectOtherProjects}
-                />
-            </TextDiv>
+            {techSelected ? (
+                <TextDiv>
+                    <ProjectTab
+                        mainSelected={mainSelected}
+                        otherSelected={otherSelected}
+                        selectMainProjects={selectMainProjects}
+                        selectOtherProjects={selectOtherProjects}
+                        headingOne="main projects"
+                        headingTwo="other projects"
+                    />
+                </TextDiv>
+            ) : designSelected ? (
+                <TextDiv>
+                    <ProjectTab
+                        mainSelected={mainSelected}
+                        otherSelected={otherSelected}
+                        selectMainProjects={selectMainProjects}
+                        selectOtherProjects={selectOtherProjects}
+                        headingOne="graphics"
+                        headingTwo="ui design/prototypes (figma)"
+                    />
+                </TextDiv>
+            ) : null}
             <TextDiv />
-            { techSelected 
-                ? mainSelected 
-                    ? <MainTechProjects /> 
-                    : otherSelected 
-                        ? <OtherTechProjects /> 
-                        : null
-                : null
-            }
+            {techSelected ? (
+                mainSelected ? (
+                    <MainTechProjects />
+                ) : otherSelected ? (
+                    <OtherTechProjects />
+                ) : null
+            ) : null}
 
-            {
-                designSelected?
-                    (<SemiBoldText>coming soon</SemiBoldText>)
-                    : null
-            }
+            {designSelected ? <SemiBoldText>coming soon</SemiBoldText> : null}
             <TextDiv />
         </ProfileContainer>
     );
