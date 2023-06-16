@@ -1,0 +1,73 @@
+import styled from 'styled-components';
+import { SemiBoldText } from './TextComponents';
+import { Colors } from '../constants/colors';
+import { useState } from 'react';
+
+const Grid = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    justify-items: center;
+    border-style: none none solid none;
+    border-color: ${Colors.white_75};
+    border-width: 0.1em;
+`;
+
+const Tab = styled.div<{ backgroundColor?: string }>`
+    border-style: solid solid none solid;
+    border-color: ${Colors.white_75};
+    border-width: 0.1em;
+    padding: 1em;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    background: ${(props) =>
+        props.backgroundColor ? props.backgroundColor : 'transparent'};
+    cursor: pointer;
+    width: 75%;
+`;
+
+const ProjectTab = ({
+    mainSelected,
+    otherSelected,
+    selectMainProjects,
+    selectOtherProjects,
+}: {
+    mainSelected: boolean;
+    otherSelected: boolean;
+    selectMainProjects: () => void;
+    selectOtherProjects: () => void;
+}) => {
+    return (
+        <Grid>
+            <Tab
+                backgroundColor={
+                    mainSelected
+                        ? `linear-gradient(${Colors.blue_75}, transparent)`
+                        : 'transparent'
+                }
+                onClick={selectMainProjects}>
+                <SemiBoldText
+                    fontSize="1.25em"
+                    color={mainSelected ? Colors.yellow : Colors.white}>
+                    main projects
+                </SemiBoldText>
+            </Tab>
+            <Tab
+                backgroundColor={
+                    otherSelected
+                        ? `linear-gradient(${Colors.blue_75}, transparent)`
+                        : 'transparent'
+                }
+                onClick={selectOtherProjects}>
+                <SemiBoldText
+                    fontSize="1.25em"
+                    color={otherSelected ? Colors.yellow : Colors.white}>
+                    other projects
+                </SemiBoldText>
+            </Tab>
+        </Grid>
+    );
+};
+
+export default ProjectTab;
