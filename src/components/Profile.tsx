@@ -78,7 +78,7 @@ const Profile = () => {
             <SemiBoldText>
                 {NORMAL_SPACE}you are currently viewing my{NORMAL_SPACE}
             </SemiBoldText>
-            <SemiBoldText>tech projects</SemiBoldText>
+            <SemiBoldText color={Colors.pink}>tech projects</SemiBoldText>
             <SemiBoldText>. click{NORMAL_SPACE}</SemiBoldText>
             <SemiBoldText color={Colors.blue} hover hoverColor={Colors.blue_75}>
                 here
