@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { Colors } from '../constants/colors';
-import { emailMe, toGithub, toLinkedIn, toResume } from '../constants/links';
-import { SPACER } from '../constants/constants';
 import ProjectComponent from './ProjectComponent';
-import { BoldText, SemiBoldText } from './TextComponents';
-import { tech_projects } from '../constants/tech-projects';
+import { BoldText, RegularText, SemiBoldText } from './TextComponents';
+import { other_tech_projects, tech_projects } from '../constants/tech-projects';
+import Links from './Links';
+import { NORMAL_SPACE } from '../constants/constants';
+import ProjectTab from './ProjectTab';
+import { useState } from 'react';
 
 const ProfileContainer = styled.div<{
     marginLeft?: string;
@@ -22,19 +24,19 @@ const ProfileContainer = styled.div<{
     overflow-x: auto;
 `;
 
-const TextDiv = styled.div<{ flexDirection?: string }>`
+export const TextDiv = styled.div<{ flexDirection?: string; display?: string}>`
     padding-top: 1em;
     padding-bottom: 1em;
-    display: flex;
-    flex-direction: ${(props) =>
-        props.flexDirection ? props.flexDirection : 'column'};
+    display: ${props => props.display? props.display : "flex"};
+    flex-direction: ${(props) => props.display === "flex" && props.flexDirection ? props.flexDirection : 'column'};
 `;
 
 const HorizontalScroll = styled.div`
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
+    padding-bottom: 1em;
 
     ::-webkit-scrollbar{
         height: 4px;
@@ -42,7 +44,7 @@ const HorizontalScroll = styled.div`
     }
 
     ::-webkit-scrollbar-thumb:horizontal{
-        background: ${Colors.blue_50};
+        background: ${Colors.blue_25};
         border-radius: 10px;
     }
 `
@@ -54,64 +56,32 @@ const ProjectContainerWrapper = styled.div`
 `
 
 const Profile = () => {
-    return (
-        <ProfileContainer marginLeft="1em">
-            <TextDiv>
-                <BoldText fontSize="2.5em">about</BoldText>
-            </TextDiv>
-            <TextDiv />
-            <TextDiv>
-                <BoldText
-                    marginBottom="0.25em"
-                    fontSize="3.5em"
-                    color={Colors.yellow}>
-                    good to see you here.
-                </BoldText>
-                <SemiBoldText marginBottom="1em" fontSize="1em" lineHeight="1.5" textAlign="justify">
-                    my name is melissa, and my passion for web development started when i learnt basic HTML and CSS when i was 14,
-                    driven by my hobby of graphic design. afterwards, i learnt that web development involves more
-                    than just designing, but it only increases my enthusiasm in it as there is so much to learn. 
-                    i enjoy applying the things i learnt to the projects i make or participate in.
-                </SemiBoldText>
-                <SemiBoldText fontSize="1.25em">
-                    <SemiBoldText
-                        color={Colors.blue}
-                        hover
-                        hoverColor={Colors.blue_75}
-                        onClick={toGithub}>
-                        github
-                    </SemiBoldText>
-                    <SemiBoldText>{SPACER}</SemiBoldText>
-                    <SemiBoldText
-                        color={Colors.blue}
-                        hover
-                        hoverColor={Colors.blue_75}
-                        onClick={toLinkedIn}>
-                        linkedin
-                    </SemiBoldText>
-                    <SemiBoldText>{SPACER}</SemiBoldText>
-                    <SemiBoldText
-                        color={Colors.blue}
-                        hover
-                        hoverColor={Colors.blue_75}
-                        onClick={toResume}>
-                        resume
-                    </SemiBoldText>
-                    <SemiBoldText>{SPACER}</SemiBoldText>
-                    <SemiBoldText
-                        color={Colors.blue}
-                        hover
-                        hoverColor={Colors.blue_75}
-                        onClick={emailMe}>
-                        email
-                    </SemiBoldText>
-                </SemiBoldText>
-            </TextDiv>
-            <TextDiv />
-            <TextDiv>
-                <BoldText fontSize="2.5em" marginBottom='0.5em'>main projects</BoldText>
-            </TextDiv>
-            <HorizontalScroll>
+    const [mainSelected, setMainSelected] = useState(true);
+    const [otherSelected, setOtherSelected] = useState(false);
+
+    const selectOtherProjects = () => {
+        setMainSelected(false);
+        setOtherSelected(true);
+    }
+
+    const selectMainProjects = () => {
+        setMainSelected(true);
+        setOtherSelected(false);
+    }
+
+    const Note = () => (
+        <TextDiv display='block'>
+            <SemiBoldText color={Colors.yellow}>note:</SemiBoldText>
+            <SemiBoldText>{NORMAL_SPACE}you are currently viewing my{NORMAL_SPACE}</SemiBoldText> 
+            <SemiBoldText>tech projects</SemiBoldText>
+            <SemiBoldText>. click{NORMAL_SPACE}</SemiBoldText>
+            <SemiBoldText color={Colors.blue} hover hoverColor={Colors.blue_75}>here</SemiBoldText>
+            <SemiBoldText>{NORMAL_SPACE}to switch to my design projects.</SemiBoldText>
+        </TextDiv>
+    )
+
+    const MainTechProjects = () => (
+        <HorizontalScroll>
             {
                 tech_projects.map((project) => (
                     <ProjectContainerWrapper>
@@ -120,10 +90,36 @@ const Profile = () => {
                 ))
             }
             </HorizontalScroll>
-            <TextDiv />
+    )
+
+    const OtherTechProjects = () => (
+        <HorizontalScroll>
+            {
+                other_tech_projects.map((project) => (
+                    <ProjectContainerWrapper>
+                        <ProjectComponent project={project}/>
+                    </ProjectContainerWrapper>
+                ))
+            }
+            </HorizontalScroll>
+    )
+
+
+    return (
+        <ProfileContainer marginLeft="1em">
+            <Links/>
+            <Note />
             <TextDiv>
-                <BoldText fontSize="2.5em" marginBottom='0.5em'>others</BoldText>
+                <ProjectTab 
+                    mainSelected={mainSelected}
+                    otherSelected={otherSelected}
+                    selectMainProjects={selectMainProjects}
+                    selectOtherProjects={selectOtherProjects}/>
             </TextDiv>
+            <TextDiv />
+            { mainSelected? <MainTechProjects/> : null }
+            { otherSelected? <OtherTechProjects/> : null } 
+            <TextDiv />
         </ProfileContainer>
     );
 };
