@@ -33,6 +33,12 @@ code {
 }
 
 @font-face {
+  font-family: "Metropolis-BoldItalic";
+  src: local("Metropolis-BoldItalic"),
+  url("./resources/fonts/Metropolis-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Metropolis-Medium";
   src: local("Metropolis-Medium"),
   url("./resources/fonts/Metropolis-Medium.ttf") format("truetype");
