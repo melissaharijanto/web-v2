@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { SemiBoldText } from './TextComponents';
 import { Colors } from '../constants/colors';
-import { useState } from 'react';
 
 const Grid = styled.div`
     display: grid;
