@@ -24,6 +24,9 @@ const Tab = styled.div<{ backgroundColor?: string }>`
         props.backgroundColor ? props.backgroundColor : 'transparent'};
     cursor: pointer;
     width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const ProjectTab = ({
@@ -31,11 +34,15 @@ const ProjectTab = ({
     otherSelected,
     selectMainProjects,
     selectOtherProjects,
+    headingOne,
+    headingTwo,
 }: {
     mainSelected: boolean;
     otherSelected: boolean;
     selectMainProjects: () => void;
     selectOtherProjects: () => void;
+    headingOne: string;
+    headingTwo: string;
 }) => {
     return (
         <Grid>
@@ -48,8 +55,9 @@ const ProjectTab = ({
                 onClick={selectMainProjects}>
                 <SemiBoldText
                     fontSize="1.25em"
-                    color={mainSelected ? Colors.yellow : Colors.white}>
-                    main projects
+                    color={mainSelected ? Colors.yellow : Colors.white}
+                    textAlign="center">
+                    {headingOne}
                 </SemiBoldText>
             </Tab>
             <Tab
@@ -61,8 +69,9 @@ const ProjectTab = ({
                 onClick={selectOtherProjects}>
                 <SemiBoldText
                     fontSize="1.25em"
-                    color={otherSelected ? Colors.yellow : Colors.white}>
-                    other projects
+                    color={otherSelected ? Colors.yellow : Colors.white}
+                    textAlign="center">
+                    {headingTwo}
                 </SemiBoldText>
             </Tab>
         </Grid>
