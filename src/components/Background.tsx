@@ -27,7 +27,6 @@ export const IntroAndProjectsBackground = styled.div`
 
 export const ExperienceBackground = styled.div`
     background: linear-gradient(${Colors.black}, ${Colors.black});
-    background-color: ${Colors.black_90};
     background-blend-mode: multiply;
     width: 100vw;
     height: 100vh;
