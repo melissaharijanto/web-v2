@@ -82,8 +82,12 @@ export const BoldText = styled.span<{
     fontSize?: string;
     marginBottom?: string;
     textAlign?: string;
+    italic?: boolean;
 }>`
-    font-family: 'Metropolis-Bold', 'sans-serif';
+    font-family: ${(props) =>
+        props.italic
+            ? `'Metropolis-BoldItalic', 'sans-serif'`
+            : `'Metropolis-Bold', 'sans-serif'`};
     color: ${(props) => (props.color ? props.color : Colors.white)};
     font-size: ${(props) => (props.fontSize ? props.fontSize : '1em')};
     margin-bottom: ${(props) =>
