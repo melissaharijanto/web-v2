@@ -7,6 +7,7 @@ export const Colors = {
     pink_75: '#FF227375',
     yellow: '#FFBD59',
     yellow_75: '#FFBD5975',
+    yellow_50: '#FFBD5950',
     blue: '#506EF8',
     blue_25: '#506EF825',
     blue_50: '#506EF850',
