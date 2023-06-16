@@ -8,12 +8,18 @@ import MainTechProjects from './tech-projects/MainTechProjects';
 import OtherTechProjects from './tech-projects/OtherTechProjects';
 import { SemiBoldText } from './TextComponents';
 import ProjectViewNote from './ProjectViewNote';
+import GraphicsGrid from './design-projects/GraphicsGrid';
+import { toBehance } from '../constants/links';
 
-const ProfileContainer = styled.div<{
+export const Container = styled.div<{
     marginLeft?: string;
     marginRight?: string;
+    gradientColor?: string;
 }>`
-    background: linear-gradient(${Colors.purple}, transparent);
+    background: ${(props) =>
+        props.gradientColor
+            ? `linear-gradient(${props.gradientColor}, transparent)`
+            : `linear-gradient(${Colors.purple}, transparent)`};
     border-radius: 20px;
     padding: 4em 5em 4em 5em;
     margin-top: 2em;
@@ -22,7 +28,6 @@ const ProfileContainer = styled.div<{
     margin-right: ${(props) => (props.marginRight ? props.marginRight : '2em')};
     display: flex;
     flex-direction: column;
-    overflow-x: auto;
 `;
 
 export const TextDiv = styled.div<{ flexDirection?: string; display?: string }>`
@@ -40,6 +45,8 @@ const Profile = () => {
     const [viewDesignProjects, setViewDesignProjects] = useState(false);
     const [mainSelected, setMainSelected] = useState(true);
     const [otherSelected, setOtherSelected] = useState(false);
+    const [graphicsSelected, setGraphicsSelected] = useState(true);
+    const [figmaSelected, setFigmaSelected] = useState(false);
 
     const techSelected = viewTechProjects && !viewDesignProjects;
     const designSelected = !viewTechProjects && viewDesignProjects;
@@ -64,8 +71,18 @@ const Profile = () => {
         setOtherSelected(false);
     };
 
+    const selectGraphics = () => {
+        setGraphicsSelected(true);
+        setFigmaSelected(false);
+    };
+
+    const selectFigmaProjects = () => {
+        setGraphicsSelected(false);
+        setFigmaSelected(true);
+    };
+
     return (
-        <ProfileContainer marginLeft="1em">
+        <Container>
             <Links />
             <ProjectViewNote
                 viewTechProjects={viewTechProjects}
@@ -87,10 +104,10 @@ const Profile = () => {
             ) : designSelected ? (
                 <TextDiv>
                     <ProjectTab
-                        mainSelected={mainSelected}
-                        otherSelected={otherSelected}
-                        selectMainProjects={selectMainProjects}
-                        selectOtherProjects={selectOtherProjects}
+                        mainSelected={graphicsSelected}
+                        otherSelected={figmaSelected}
+                        selectMainProjects={selectGraphics}
+                        selectOtherProjects={selectFigmaProjects}
                         headingOne="graphics"
                         headingTwo="ui design/prototypes (figma)"
                     />
@@ -105,9 +122,30 @@ const Profile = () => {
                 ) : null
             ) : null}
 
-            {designSelected ? <SemiBoldText>coming soon</SemiBoldText> : null}
+            {designSelected ? (
+                graphicsSelected ? (
+                    <>
+                        <SemiBoldText
+                            textAlign="right"
+                            marginBottom="1em"
+                            fontSize="1.25em">
+                            <SemiBoldText>view in{NORMAL_SPACE}</SemiBoldText>
+                            <SemiBoldText
+                                hover
+                                hoverColor={Colors.blue_75}
+                                color={Colors.blue}
+                                onClick={toBehance}>
+                                behance
+                            </SemiBoldText>
+                        </SemiBoldText>
+                        <GraphicsGrid />
+                    </>
+                ) : figmaSelected ? (
+                    <SemiBoldText>coming soon</SemiBoldText>
+                ) : null
+            ) : null}
             <TextDiv />
-        </ProfileContainer>
+        </Container>
     );
 };
 
