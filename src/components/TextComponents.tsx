@@ -83,6 +83,7 @@ export const BoldText = styled.span<{
     marginBottom?: string;
     textAlign?: string;
     italic?: boolean;
+    lineHeight?: string;
 }>`
     font-family: ${(props) =>
         props.italic
@@ -93,4 +94,6 @@ export const BoldText = styled.span<{
     margin-bottom: ${(props) =>
         props.marginBottom ? props.marginBottom : '0'};
     text-align: ${(props) => (props.textAlign ? props.textAlign : 'left')};
+    line-height: ${(props) =>
+        props.lineHeight ? props.lineHeight : 'normal'} !important;
 `;
