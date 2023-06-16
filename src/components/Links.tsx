@@ -1,8 +1,8 @@
-import { Colors } from "../constants/colors";
-import { SPACER } from "../constants/constants";
-import { emailMe, toGithub, toLinkedIn, toResume } from "../constants/links";
-import { TextDiv } from "./Profile";
-import { BoldText, SemiBoldText } from "./TextComponents";
+import { Colors } from '../constants/colors';
+import { SPACER } from '../constants/constants';
+import { emailMe, toGithub, toLinkedIn, toResume } from '../constants/links';
+import { TextDiv } from './Profile';
+import { BoldText, SemiBoldText } from './TextComponents';
 
 const Links = () => {
     return (
@@ -17,11 +17,18 @@ const Links = () => {
                     color={Colors.yellow}>
                     good to see you here.
                 </BoldText>
-                <SemiBoldText marginBottom="1em" fontSize="1em" lineHeight="1.5" textAlign="justify">
-                    my name is melissa, and my passion for web development started when i learnt basic HTML and CSS when i was 14,
-                    driven by my hobby of graphic design. afterwards, i learnt that web development involves more
-                    than just designing, but it only increases my enthusiasm in it as there is so much to learn. 
-                    i enjoy applying the things i learnt to the projects i make or participate in.
+                <SemiBoldText
+                    marginBottom="1em"
+                    fontSize="1em"
+                    lineHeight="1.5"
+                    textAlign="justify">
+                    my name is melissa, and my passion for web development
+                    started when i learnt basic HTML and CSS when i was 14,
+                    driven by my hobby of graphic design. afterwards, i learnt
+                    that web development involves more than just designing, but
+                    it only increases my enthusiasm in it as there is so much to
+                    learn. i enjoy applying the things i learnt to the projects
+                    i make or participate in.
                 </SemiBoldText>
                 <SemiBoldText fontSize="1.25em">
                     <SemiBoldText
@@ -58,7 +65,7 @@ const Links = () => {
                 </SemiBoldText>
             </TextDiv>
         </>
-    )
-}
+    );
+};
 
 export default Links;

@@ -13,4 +13,4 @@ export const Colors = {
     white: '#F8F8F8',
     white_10: '#F8F8F810',
     white_75: '#F8F8F875',
-}
+};

@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import { Colors } from '../constants/colors';
 import { WelcomePageBackground } from '../components/Background';
-import { BoldText, RegularText, SemiBoldText } from '../components/TextComponents';
+import {
+    BoldText,
+    RegularText,
+    SemiBoldText,
+} from '../components/TextComponents';
 import { NORMAL_SPACE, SPACER } from '../constants/constants';
 import { redirect } from '../constants/utils';
 
@@ -13,7 +17,6 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 `;
 
 const WhiteHorizontalLine = styled.hr`
@@ -31,21 +34,28 @@ const WelcomePage = () => {
     return (
         <WelcomePageBackground>
             <Container>
-                <SemiBoldText marginBottom='0.5em' fontSize='1.25em'>
+                <SemiBoldText marginBottom="0.5em" fontSize="1.25em">
                     hello! i am
                 </SemiBoldText>
-                <BoldText color={Colors.yellow} fontSize='2.5em' textAlign='center'>
+                <BoldText
+                    color={Colors.yellow}
+                    fontSize="2.5em"
+                    textAlign="center">
                     melissa anastasia harijanto
                 </BoldText>
-                <WhiteHorizontalLine/>
-                <SemiBoldText marginBottom='1em' textAlign='center'>
-                    nus computer science undergraduate{SPACER}frontend & web dev enthusiast
+                <WhiteHorizontalLine />
+                <SemiBoldText marginBottom="1em" textAlign="center">
+                    nus computer science undergraduate{SPACER}frontend & web dev
+                    enthusiast
                 </SemiBoldText>
                 <div>
-                    <RegularText italic>
-                        click&nbsp;
-                    </RegularText>
-                    <RegularText italic hover color={Colors.blue} hoverColor={Colors.blue_75} onClick={() => redirect("https://www.spotify.com")}>
+                    <RegularText italic>click&nbsp;</RegularText>
+                    <RegularText
+                        italic
+                        hover
+                        color={Colors.blue}
+                        hoverColor={Colors.blue_75}
+                        onClick={() => redirect('https://www.spotify.com')}>
                         here
                     </RegularText>
                     <RegularText italic>

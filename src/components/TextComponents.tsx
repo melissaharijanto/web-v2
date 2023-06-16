@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import { Colors } from '../constants/colors';
 
-
-export const RegularText= styled.span<{
+export const RegularText = styled.span<{
     color?: string;
     italic?: boolean;
     fontSize?: string;
@@ -20,8 +19,9 @@ export const RegularText= styled.span<{
     font-size: ${(props) => (props.fontSize ? props.fontSize : '1em')};
     margin-bottom: ${(props) =>
         props.marginBottom ? props.marginBottom : '0'};
-    line-height: ${props => props.lineHeight ? props.lineHeight : "normal"} !important;
-    text-align: ${props => props.textAlign ? props.textAlign : "left"};
+    line-height: ${(props) =>
+        props.lineHeight ? props.lineHeight : 'normal'} !important;
+    text-align: ${(props) => (props.textAlign ? props.textAlign : 'left')};
 
     :hover {
         color: ${(props) =>
@@ -57,8 +57,9 @@ export const SemiBoldText = styled.span<{
     font-size: ${(props) => (props.fontSize ? props.fontSize : '1em')};
     margin-bottom: ${(props) =>
         props.marginBottom ? props.marginBottom : '0'};
-    line-height: ${props => props.lineHeight ? props.lineHeight : "normal"} !important;
-    text-align: ${props => props.textAlign ? props.textAlign : "left"};
+    line-height: ${(props) =>
+        props.lineHeight ? props.lineHeight : 'normal'} !important;
+    text-align: ${(props) => (props.textAlign ? props.textAlign : 'left')};
 
     :hover {
         color: ${(props) =>
@@ -87,5 +88,5 @@ export const BoldText = styled.span<{
     font-size: ${(props) => (props.fontSize ? props.fontSize : '1em')};
     margin-bottom: ${(props) =>
         props.marginBottom ? props.marginBottom : '0'};
-    text-align: ${props => props.textAlign ? props.textAlign : "left"};
+    text-align: ${(props) => (props.textAlign ? props.textAlign : 'left')};
 `;

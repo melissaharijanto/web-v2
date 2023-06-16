@@ -12,7 +12,7 @@ export const WelcomePageBackground = styled.div`
     align-items: center;
     flex-direction: column;
     // overflow: auto;
-`
+`;
 
 export const IntroAndProjects = styled.div`
     background: linear-gradient(${Colors.black}, ${Colors.black});
@@ -25,5 +25,4 @@ export const IntroAndProjects = styled.div`
     align-items: center;
     flex-direction: column;
     overflow: auto;
-
-`
+`;

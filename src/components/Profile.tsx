@@ -24,11 +24,14 @@ const ProfileContainer = styled.div<{
     overflow-x: auto;
 `;
 
-export const TextDiv = styled.div<{ flexDirection?: string; display?: string}>`
+export const TextDiv = styled.div<{ flexDirection?: string; display?: string }>`
     padding-top: 1em;
     padding-bottom: 1em;
-    display: ${props => props.display? props.display : "flex"};
-    flex-direction: ${(props) => props.display === "flex" && props.flexDirection ? props.flexDirection : 'column'};
+    display: ${(props) => (props.display ? props.display : 'flex')};
+    flex-direction: ${(props) =>
+        props.display === 'flex' && props.flexDirection
+            ? props.flexDirection
+            : 'column'};
 `;
 
 const HorizontalScroll = styled.div`
@@ -38,22 +41,22 @@ const HorizontalScroll = styled.div`
     white-space: nowrap;
     padding-bottom: 1em;
 
-    ::-webkit-scrollbar{
+    ::-webkit-scrollbar {
         height: 4px;
         color: #000;
     }
 
-    ::-webkit-scrollbar-thumb:horizontal{
+    ::-webkit-scrollbar-thumb:horizontal {
         background: ${Colors.blue_25};
         border-radius: 10px;
     }
-`
+`;
 
 const ProjectContainerWrapper = styled.div`
-        display: inline-flex;
-        width: 500px;
-        margin: 3px 1em 1em 3px;
-`
+    display: inline-flex;
+    width: 500px;
+    margin: 3px 1em 1em 3px;
+`;
 
 const Profile = () => {
     const [mainSelected, setMainSelected] = useState(true);
@@ -62,63 +65,65 @@ const Profile = () => {
     const selectOtherProjects = () => {
         setMainSelected(false);
         setOtherSelected(true);
-    }
+    };
 
     const selectMainProjects = () => {
         setMainSelected(true);
         setOtherSelected(false);
-    }
+    };
 
     const Note = () => (
-        <TextDiv display='block'>
+        <TextDiv display="block">
             <SemiBoldText color={Colors.yellow}>note:</SemiBoldText>
-            <SemiBoldText>{NORMAL_SPACE}you are currently viewing my{NORMAL_SPACE}</SemiBoldText> 
+            <SemiBoldText>
+                {NORMAL_SPACE}you are currently viewing my{NORMAL_SPACE}
+            </SemiBoldText>
             <SemiBoldText>tech projects</SemiBoldText>
             <SemiBoldText>. click{NORMAL_SPACE}</SemiBoldText>
-            <SemiBoldText color={Colors.blue} hover hoverColor={Colors.blue_75}>here</SemiBoldText>
-            <SemiBoldText>{NORMAL_SPACE}to switch to my design projects.</SemiBoldText>
+            <SemiBoldText color={Colors.blue} hover hoverColor={Colors.blue_75}>
+                here
+            </SemiBoldText>
+            <SemiBoldText>
+                {NORMAL_SPACE}to switch to my design projects.
+            </SemiBoldText>
         </TextDiv>
-    )
+    );
 
     const MainTechProjects = () => (
         <HorizontalScroll>
-            {
-                tech_projects.map((project) => (
-                    <ProjectContainerWrapper>
-                        <ProjectComponent project={project}/>
-                    </ProjectContainerWrapper>
-                ))
-            }
-            </HorizontalScroll>
-    )
+            {tech_projects.map((project) => (
+                <ProjectContainerWrapper>
+                    <ProjectComponent project={project} />
+                </ProjectContainerWrapper>
+            ))}
+        </HorizontalScroll>
+    );
 
     const OtherTechProjects = () => (
         <HorizontalScroll>
-            {
-                other_tech_projects.map((project) => (
-                    <ProjectContainerWrapper>
-                        <ProjectComponent project={project}/>
-                    </ProjectContainerWrapper>
-                ))
-            }
-            </HorizontalScroll>
-    )
-
+            {other_tech_projects.map((project) => (
+                <ProjectContainerWrapper>
+                    <ProjectComponent project={project} />
+                </ProjectContainerWrapper>
+            ))}
+        </HorizontalScroll>
+    );
 
     return (
         <ProfileContainer marginLeft="1em">
-            <Links/>
+            <Links />
             <Note />
             <TextDiv>
-                <ProjectTab 
+                <ProjectTab
                     mainSelected={mainSelected}
                     otherSelected={otherSelected}
                     selectMainProjects={selectMainProjects}
-                    selectOtherProjects={selectOtherProjects}/>
+                    selectOtherProjects={selectOtherProjects}
+                />
             </TextDiv>
             <TextDiv />
-            { mainSelected? <MainTechProjects/> : null }
-            { otherSelected? <OtherTechProjects/> : null } 
+            {mainSelected ? <MainTechProjects /> : null}
+            {otherSelected ? <OtherTechProjects /> : null}
             <TextDiv />
         </ProfileContainer>
     );
