@@ -20,7 +20,7 @@ export const Container = styled.div<{
             : `linear-gradient(${Colors.purple}, transparent)`};
     border-radius: 20px;
     padding: 4em 5em 8em 5em;
-    margin-top: 2em;
+    margin-top: 10em;
     margin-bottom: 2em;
     margin-left: ${(props) => (props.marginLeft ? props.marginLeft : '2em')};
     margin-right: ${(props) => (props.marginRight ? props.marginRight : '2em')};
@@ -124,7 +124,13 @@ const Profile = () => {
                 graphicsSelected ? (
                     <GraphicsGrid />
                 ) : figmaSelected ? (
-                    <SemiBoldText>coming soon</SemiBoldText>
+                    <SemiBoldText
+                        textAlign="center"
+                        fontSize="1.5em"
+                        color={Colors.yellow}
+                        italic>
+                        coming soon
+                    </SemiBoldText>
                 ) : null
             ) : null}
             <TextDiv />
