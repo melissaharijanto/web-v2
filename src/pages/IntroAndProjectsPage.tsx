@@ -9,7 +9,7 @@ export const ContentDiv = styled.div`
 
 const IntroAndProjectsPage = () => {
     return (
-        <IntroAndProjectsBackground>
+        <IntroAndProjectsBackground id='about'>
             <ContentDiv>
                 <Profile />
             </ContentDiv>

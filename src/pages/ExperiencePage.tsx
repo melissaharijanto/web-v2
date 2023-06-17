@@ -22,7 +22,7 @@ const ExperienceTabWrapper = styled.div`
 
 const ExperiencePage = () => {
     return (
-        <ExperienceBackground>
+        <ExperienceBackground id='experience'>
             <ContentDiv>
                 <Container gradientColor={Colors.purple}>
                     <ExperienceHeader/>

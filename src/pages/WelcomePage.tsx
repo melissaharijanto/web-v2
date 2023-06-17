@@ -32,7 +32,7 @@ const WhiteHorizontalLine = styled.hr`
 
 const WelcomePage = () => {
     return (
-        <WelcomePageBackground>
+        <WelcomePageBackground id='welcome'>
             <Container>
                 <SemiBoldText marginBottom="0.5em" fontSize="1.25em">
                     hello! i am
