@@ -7,9 +7,6 @@ import { toResume } from '../constants/links';
 
 const Logo = styled.img`
     width: 6vw;
-    margin-right: auto;
-    margin-left: 2em;
-    padding: 1em 0;
 `;
 
 const NavigationWrapper = styled.div<{ onTop: boolean }>`
@@ -42,6 +39,13 @@ const HrefLink = styled.a`
     text-decoration: none;
 `;
 
+const LogoHref = styled.a`
+    text-decoration: none;
+    margin-right: auto;
+    margin-left: 2em;
+    padding: 1em 0;
+`;
+
 const NavigationBar = () => {
     const [onTop, setOnTop] = useState<boolean>(true);
 
@@ -55,7 +59,9 @@ const NavigationBar = () => {
 
     return (
         <NavigationWrapper onTop={onTop}>
-            <Logo src={MHLogo} />
+            <LogoHref href="#welcome">
+                <Logo src={MHLogo} />
+            </LogoHref>
             <Links>
                 <LinkDiv>
                     <HrefLink href="#welcome">
