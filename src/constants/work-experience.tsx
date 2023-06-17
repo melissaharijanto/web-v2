@@ -10,7 +10,7 @@ export const experiences: Experience[] = [
     {
         position: 'digital transformation intern',
         location: 'OCBC Bank',
-        type: 'work internship',
+        type: 'internship - full-time',
         period: 'may 2023 - present',
         job_description: [
             'write test cases and conduct user acceptance testing for the fraud management system',
@@ -20,18 +20,18 @@ export const experiences: Experience[] = [
     {
         position: 'undergraduate teaching assistant',
         location: 'National University of Singapore',
-        type: 'part-time',
+        type: 'part-time work',
         period: 'jan 2023 - may 2023',
         job_description: [
             'subject: cs2030s',
             'conduct weekly lab sessions for 14 students',
             'create powerpoint slides to aid in teaching',
-            "grade assignments and give constructive comments for the students'future improvement",
+            "grade assignments and give constructive comments for the students' future improvement",
         ],
     },
     {
         position: 'frontend-developer & ui/ux designer',
-        location: "NUS Indonesian Students' Association (Remote)",
+        location: "NUS Indonesian Students' Association",
         type: 'co-curricular activity',
         period: 'aug 2022 - present',
         job_description: [
