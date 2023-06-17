@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { SemiBoldText } from './TextComponents';
-import { Colors } from '../constants/colors';
+import { Colors } from '../../constants/colors';
+import { SemiBoldText } from '../TextComponents';
 
 const Grid = styled.div`
     display: grid;

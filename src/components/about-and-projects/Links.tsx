@@ -1,8 +1,8 @@
-import { Colors } from '../constants/colors';
-import { SPACER } from '../constants/constants';
-import { emailMe, toGithub, toLinkedIn, toResume } from '../constants/links';
+import { Colors } from '../../constants/colors';
+import { SPACER } from '../../constants/constants';
+import { emailMe, toGithub, toLinkedIn, toResume } from '../../constants/links';
 import { TextDiv } from './Profile';
-import { BoldText, SemiBoldText } from './TextComponents';
+import { BoldText, SemiBoldText } from '../TextComponents';
 
 const Links = () => {
     return (

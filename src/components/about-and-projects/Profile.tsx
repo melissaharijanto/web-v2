@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { Colors } from '../constants/colors';
 import Links from './Links';
 import ProjectTab from './ProjectTab';
 import { useState } from 'react';
-import MainTechProjects from './tech-projects/MainTechProjects';
-import OtherTechProjects from './tech-projects/OtherTechProjects';
-import { SemiBoldText } from './TextComponents';
 import ProjectViewNote from './ProjectViewNote';
-import GraphicsGrid from './design-projects/GraphicsGrid';
+import GraphicsGrid from '../design-projects/GraphicsGrid';
+import { SemiBoldText } from '../TextComponents';
+import MainTechProjects from '../tech-projects/MainTechProjects';
+import OtherTechProjects from '../tech-projects/OtherTechProjects';
+import { Colors } from '../../constants/colors';
 
 export const Container = styled.div<{
     marginLeft?: string;

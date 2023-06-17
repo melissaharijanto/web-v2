@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { IntroAndProjectsBackground } from '../components/Background';
-import Profile from '../components/Profile';
+import Profile from '../components/about-and-projects/Profile';
+
 
 export const ContentDiv = styled.div`
     width: 85%;

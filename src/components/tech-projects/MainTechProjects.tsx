@@ -1,5 +1,6 @@
 import { tech_projects } from '../../constants/tech-projects';
-import ProjectComponent from '../ProjectComponent';
+import ProjectComponent from '../about-and-projects/ProjectComponent';
+
 import {
     HorizontalScroll,
     ProjectContainerWrapper,

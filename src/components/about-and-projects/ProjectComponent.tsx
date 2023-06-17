@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { Colors } from '../constants/colors';
-import { TechProject } from '../constants/tech-projects';
-import { BoldText, SemiBoldText } from './TextComponents';
-import { EN_SPACER, SPACER } from '../constants/constants';
-import { redirect } from '../constants/utils';
+import { Colors } from '../../constants/colors';
+import { TechProject } from '../../constants/tech-projects';
+import { BoldText, SemiBoldText } from '../TextComponents';
+import { redirect } from '../../constants/utils';
+import { EN_SPACER, SPACER } from '../../constants/constants';
 
 const ProjectContainer = styled.div`
     background: linear-gradient(${Colors.pink_75}, transparent);

@@ -1,7 +1,8 @@
-import { Colors } from '../constants/colors';
-import { NORMAL_SPACE } from '../constants/constants';
+
+import { Colors } from '../../constants/colors';
+import { NORMAL_SPACE } from '../../constants/constants';
+import { SemiBoldText } from '../TextComponents';
 import { TextDiv } from './Profile';
-import { SemiBoldText } from './TextComponents';
 
 const ProjectViewNote = ({
     viewTechProjects,
