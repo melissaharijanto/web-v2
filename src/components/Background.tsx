@@ -29,10 +29,10 @@ export const ExperienceBackground = styled.div`
     background: linear-gradient(${Colors.black}, ${Colors.black});
     background-blend-mode: multiply;
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow-x: auto;
+    overflow: auto;
 `
