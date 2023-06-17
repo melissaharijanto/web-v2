@@ -4,6 +4,7 @@ export const Colors = {
     black_90: '#07070790',
     purple: '#3E2252',
     pink: '#FF2273',
+    pink_50: '#FF227350',
     pink_75: '#FF227375',
     yellow: '#FFBD59',
     yellow_75: '#FFBD5975',
