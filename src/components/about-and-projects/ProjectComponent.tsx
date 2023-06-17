@@ -22,6 +22,7 @@ const ProjectContainer = styled.div`
 const ProjectImage = styled.img`
     width: 100%;
     margin-bottom: 1em;
+    border-radius: 10px;
 `;
 
 const TextDiv = styled.div<{ flexDirection?: string; alignItems?: string }>`
