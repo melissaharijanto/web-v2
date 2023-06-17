@@ -18,6 +18,7 @@ export type TechProject = {
     type: string;
     image: string;
     deployment: string | null;
+    download: string | null;
 };
 
 export const tech_projects: TechProject[] = [
@@ -38,7 +39,8 @@ export const tech_projects: TechProject[] = [
         frontend: null,
         type: 'team project',
         image: PinusStudy,
-        deployment: 'https://https://pinus-study.netlify.app/',
+        deployment: 'https://pinus-study.netlify.app/',
+        download: null,
     },
     {
         name: 'gameroom',
@@ -54,6 +56,7 @@ export const tech_projects: TechProject[] = [
         type: 'individual project',
         image: GameRoom,
         deployment: 'https://gameroom-forum.netlify.app/',
+        download: null,
     },
     {
         name: 'travelLog',
@@ -81,11 +84,12 @@ export const tech_projects: TechProject[] = [
         frontend: null,
         type: 'team project',
         image: TravelLog,
-        deployment: '',
+        deployment: null,
+        download: 'https://drive.google.com/file/d/1btqUkEVeYYCeM1tJqklh7v3JmKq8REor/view',
     },
 ];
 
-export const other_tech_projects = [
+export const other_tech_projects: TechProject[] = [
     {
         name: 'classroom360',
         contribution: [`ui with react360`],
@@ -99,7 +103,8 @@ export const other_tech_projects = [
         frontend: null,
         type: 'team project',
         image: Classroom360,
-        deployment: '',
+        deployment: 'https://classroom-360.netlify.app',
+        download: null,
     },
     {
         name: 'track-o',
@@ -118,6 +123,7 @@ export const other_tech_projects = [
         frontend: null,
         type: 'team project',
         image: TrackO,
-        deployment: '',
+        deployment: null,
+        download: 'https://github.com/AY2223S1-CS2103T-W15-3/tp/releases/tag/v1.4',
     },
 ];

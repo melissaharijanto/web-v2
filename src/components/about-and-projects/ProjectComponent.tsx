@@ -4,6 +4,8 @@ import { TechProject } from '../../constants/tech-projects';
 import { BoldText, SemiBoldText } from '../TextComponents';
 import { redirect } from '../../constants/utils';
 import { EN_SPACER, SPACER } from '../../constants/constants';
+import { useState } from 'react';
+import ProjectDescriptionModal from './ProjectDescriptionModal';
 
 const ProjectContainer = styled.div`
     background: linear-gradient(${Colors.pink_75}, transparent);
@@ -19,7 +21,7 @@ const ProjectContainer = styled.div`
     }
 `;
 
-const ProjectImage = styled.img`
+export const ProjectImage = styled.img`
     width: 100%;
     margin-bottom: 1em;
     border-radius: 10px;
@@ -35,6 +37,8 @@ const TextDiv = styled.div<{ flexDirection?: string; alignItems?: string }>`
         props.alignItems ? props.alignItems : 'flex-start'};
 `;
 const ProjectComponent = ({ project }: { project: TechProject }) => {
+    const [showDescription, setShowDescription] = useState(false);
+
     const frontendExists = project.frontend != null;
     const backendExists = project.backend != null;
     const githubExists = project.github != null;
@@ -53,6 +57,14 @@ const ProjectComponent = ({ project }: { project: TechProject }) => {
         frontendDoesntExist &&
         backendDoesntExist &&
         docsDoesntExist;
+
+    const displayProjectDetails = () => {
+        setShowDescription(true);
+    };
+
+    const closeProjectDetails = () => {
+        setShowDescription(false);
+    };
 
     const FrontendAndBackendOnlyComponent = () => (
         <SemiBoldText>
@@ -100,7 +112,14 @@ const ProjectComponent = ({ project }: { project: TechProject }) => {
     );
 
     return (
-        <ProjectContainer>
+        <>
+        {showDescription ? (
+                <ProjectDescriptionModal
+                    project={project}
+                    closeModal={closeProjectDetails}
+                />
+            ) : null}
+        <ProjectContainer onClick={displayProjectDetails}>
             <ProjectImage src={project.image} />
             <TextDiv>
                 <TextDiv flexDirection="row" alignItems="center">
@@ -130,6 +149,7 @@ const ProjectComponent = ({ project }: { project: TechProject }) => {
                 </SemiBoldText>
             </TextDiv>
         </ProjectContainer>
+        </>
     );
 };
 
