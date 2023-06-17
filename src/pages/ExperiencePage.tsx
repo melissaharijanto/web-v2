@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { ExperienceBackground } from '../components/Background';
 import { Colors } from '../constants/colors';
-import { BoldText } from '../components/TextComponents';
 import { ContentDiv } from './IntroAndProjectsPage';
 import ExperienceTab from '../components/experience-components/ExperienceTab';
 import { experiences } from '../constants/work-experience';
