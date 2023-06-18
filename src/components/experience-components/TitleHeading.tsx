@@ -4,6 +4,7 @@ import { LightText } from "../TextComponents"
 export const ExperienceGrid = styled.div`
     display: grid; 
     grid-template-columns: 4fr 3fr 3fr;
+    grid-column-gap: 1em;
 `
 
 const TitleDiv = styled.div`
