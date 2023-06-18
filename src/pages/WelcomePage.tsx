@@ -48,8 +48,8 @@ const WelcomePage = () => {
                     nus computer science undergraduate{SPACER}frontend & web dev
                     enthusiast
                 </SemiBoldText>
-                <div>
-                    <RegularText italic>click&nbsp;</RegularText>
+                <RegularText marginBottom='1em' fontSize='0.875em'>
+                    <RegularText italic>click{NORMAL_SPACE}</RegularText>
                     <RegularText
                         italic
                         hover
@@ -61,7 +61,12 @@ const WelcomePage = () => {
                     <RegularText italic>
                         {NORMAL_SPACE}for design inspiration.
                     </RegularText>
-                </div>
+                </RegularText>
+                <RegularText marginBottom='0.75em' fontSize='0.875em'>
+                    <RegularText>best viewed in{NORMAL_SPACE}</RegularText>
+                    <RegularText color={Colors.pink}>desktop</RegularText>
+                    <RegularText>.</RegularText>
+                </RegularText>
             </Container>
         </WelcomePageBackground>
     );
