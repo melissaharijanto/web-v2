@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+# melissa's portfolio website v2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For v1, view it in this <a href="https://github.com/melissaharijanto/website-v1">repository</a> for the source code. The site is deployed <a href="https://melissaharijanto.github.io/website-v1">here</a>.
 
-## Available Scripts
+## website preview
 
-In the project directory, you can run:
+<img src="./src/resources/images/website-preview.gif" width=100% />
 
-### `npm start`
+**Note: This site is best viewed in desktop!**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Some features of the site:
+- The website displays (work) experience and activities!
+- Projects are now separated into tabs. Main projects displayed are **tech projects**. Design projects can be viewed by toggling the hyperlink on top of the tab.
+- Clicking on the tech projects will display a modal that displays more detailed information!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Things I experimented with (and liked): 
+- All gradient color theme :grin: mainly using the colors I used in my GameRoom project, linked <a href="https://github.com/melissaharijanto/gameroom-frontend"> here</a>.
+- Navbar background to blur on scroll :heartpulse:
 
-### `npm test`
+To be implemented soon: 
+- Mobile responsiveness :iphone:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## inspiration & acknowledgement
 
-### `npm run build`
+- Design is heavily inspired by <a href="https://open.spotify.com/">Spotify</a>.
+- The font used is Metropolis, to be viewed <a href="https://fontsarena.com/metropolis-by-chris-simpson/#google_vignette">here</a>, as the original repository has been taken down.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## reuse
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+In **any** case of reuse, please keep the **Copyright** text in the footer as it is (other elements of the footer can be modified). Thanks! 
