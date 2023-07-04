@@ -54,6 +54,12 @@ code {
 }
 
 @font-face {
+    font-family: 'Metropolis-Regular';
+    src: local('Metropolis-Regular'),
+        url('./resources/fonts/Metropolis-Regular.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'Metropolis-Light';
     src: local('Metropolis-Light'),
         url('./resources/fonts/Metropolis-Light.ttf') format('truetype');
