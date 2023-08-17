@@ -10,6 +10,7 @@ export const WelcomePageBackground = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 3em;
 `;
 
 export const IntroAndProjectsBackground = styled.div`
