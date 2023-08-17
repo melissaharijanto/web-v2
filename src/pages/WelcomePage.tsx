@@ -61,7 +61,7 @@ const WelcomePage = () => {
           <SemiBoldText
             marginBottom="0.5em"
             textAlign="center"
-            mobileFontSize="0.875em"
+            mobileFontSize="0.75em"
             backgroundColor={Colors.pink_75}
             borderRadius="20px"
             paddingVertical="0.5em"
@@ -71,7 +71,7 @@ const WelcomePage = () => {
           <SemiBoldText
             marginBottom="1em"
             textAlign="center"
-            mobileFontSize="0.875em"
+            mobileFontSize="0.75em"
             backgroundColor={Colors.yellow_50}
             borderRadius="20px"
             paddingVertical="0.5em"
