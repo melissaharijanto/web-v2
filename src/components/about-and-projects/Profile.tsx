@@ -8,6 +8,7 @@ import { SemiBoldText } from '../TextComponents';
 import MainTechProjects from '../tech-projects/MainTechProjects';
 import OtherTechProjects from '../tech-projects/OtherTechProjects';
 import { Colors } from '../../constants/colors';
+import { screens } from '../../constants/constants';
 
 export const Container = styled.div<{
     marginLeft?: string;
@@ -19,13 +20,16 @@ export const Container = styled.div<{
             ? `linear-gradient(${props.gradientColor}, transparent)`
             : `linear-gradient(${Colors.purple}, transparent)`};
     border-radius: 20px;
-    padding: 4em 5em 8em 5em;
+    padding: 2em 2.5em 4em 2.5em;
     margin-top: 10em;
     margin-bottom: 2em;
-    margin-left: ${(props) => (props.marginLeft ? props.marginLeft : '2em')};
-    margin-right: ${(props) => (props.marginRight ? props.marginRight : '2em')};
+    // margin-left: 1.5em;
+    // margin-right: 1.5em;
     display: flex;
     flex-direction: column;
+    ${screens.lg} {
+        padding: 4em 5em 8em 5em;
+    }
 `;
 
 export const TextDiv = styled.div<{ flexDirection?: string; display?: string }>`
