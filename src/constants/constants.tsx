@@ -6,8 +6,11 @@ export const BULLET_POINT = '\u2022';
 export const COPYRIGHT_SYMBOL = '\u00A9';
 
 // screen sizes
-export const sm = '@media (min-width: 640px)';
-export const md = '@media (min-width: 768px)';
-export const lg = '@media (min-width: 1028px)';
-export const xl = '@media (min-width: 1280px)';
-export const two_xl = '@media (min-width: 1536px)';
+
+export const screens = {
+    sm: '@media (min-width: 640px)',
+    md: '@media (min-width: 768px)',
+    lg: '@media (min-width: 1028px)',
+    xl: '@media (min-width: 1280px)',
+    two_xl: '@media (min-width: 1536px)'
+}
