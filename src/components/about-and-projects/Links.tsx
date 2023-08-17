@@ -20,7 +20,7 @@ const Links = () => {
                 </BoldText>
                 <SemiBoldText
                     marginBottom="1em"
-                    fontSize="1em"
+                    fontSize="1.25em"
                     lineHeight="1.5"
                     textAlign="justify"
                     mobileFontSize='0.75em'>
