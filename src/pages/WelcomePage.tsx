@@ -6,18 +6,21 @@ import {
   RegularText,
   SemiBoldText,
 } from '../components/TextComponents';
-import { NORMAL_SPACE } from '../constants/constants';
+import { NORMAL_SPACE, screens } from '../constants/constants';
 import { redirect } from '../constants/utils';
 
 const Container = styled.div`
   background: linear-gradient(${Colors.blue_50} 10%, transparent 90%);
-  padding: 3em;
-  margin: 3em;
+  padding: 3em 2em;
+  margin: 1em;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  ${screens.lg} {
+    padding: 3em;
+  }
 `;
 
 const WhiteHorizontalLine = styled.hr`
@@ -50,7 +53,7 @@ const WelcomePage = () => {
           color={Colors.yellow}
           fontSize="2.5em"
           textAlign="center"
-          mobileFontSize="2em">
+          mobileFontSize="1.75em">
           melissa anastasia harijanto
         </BoldText>
         <WhiteHorizontalLine />
