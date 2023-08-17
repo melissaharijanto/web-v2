@@ -4,9 +4,16 @@ import styled from 'styled-components';
 import { Colors } from '../constants/colors';
 import { useState } from 'react';
 import { toResume } from '../constants/links';
+import { screens } from '../constants/constants';
 
 const Logo = styled.img`
-    width: 6vw;
+    ${screens.md} {
+        width: 10vw;
+    }
+    ${screens.lg} {
+        width: 6vw;
+    }
+    width: 17.5vw;
 `;
 
 const NavigationWrapper = styled.div<{ onTop: boolean }>`
@@ -25,14 +32,17 @@ const NavigationWrapper = styled.div<{ onTop: boolean }>`
 `;
 
 const Links = styled.div`
-    display: flex;
+    display: none;
     flex-direction: row;
     float: right;
     margin-right: 2em;
+    ${screens.lg} {
+        display: flex;
+    }
 `;
 
 const LinkDiv = styled.div`
-    margin: 0 1em;
+    margin: 0 1em; 
 `;
 
 const HrefLink = styled.a`

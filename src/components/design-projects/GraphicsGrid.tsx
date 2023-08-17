@@ -25,7 +25,8 @@ const GraphicsGrid = () => {
             <SemiBoldText
                 textAlign="right"
                 marginBottom="1em"
-                fontSize="1.25em">
+                fontSize="1.25em"
+                mobileFontSize='0.75em'>
                 <SemiBoldText>
                     {EM_DASH} view in{NORMAL_SPACE}
                 </SemiBoldText>

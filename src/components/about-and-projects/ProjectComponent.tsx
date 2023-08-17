@@ -3,16 +3,21 @@ import { Colors } from '../../constants/colors';
 import { TechProject } from '../../constants/tech-projects';
 import { BoldText, SemiBoldText } from '../TextComponents';
 import { redirect } from '../../constants/utils';
-import { EN_SPACER, SPACER } from '../../constants/constants';
+import { EN_SPACER, SPACER, screens } from '../../constants/constants';
 import { useState } from 'react';
 import ProjectDescriptionModal from './ProjectDescriptionModal';
 
 const ProjectContainer = styled.div`
     background: linear-gradient(${Colors.pink_75}, transparent);
-    padding: 1.5em;
+    padding: 1em;
     border-radius: 20px;
     display: inline-block;
-    width: 500px;
+    width: 100%;
+    ${screens.lg} {
+        width: 500px;
+        padding: 1.5em;
+    }
+    white-space: pre-wrap;
 
     &:hover {
         background: linear-gradient(${Colors.yellow_75}, transparent);
@@ -29,13 +34,23 @@ export const ProjectImage = styled.img`
 
 const TextDiv = styled.div<{ flexDirection?: string; alignItems?: string }>`
     display: flex;
-    flex-direction: ${(props) =>
-        props.flexDirection ? props.flexDirection : 'column'};
+    flex-direction: column;
     width: 100%;
     white-space: normal;
     align-items: ${(props) =>
         props.alignItems ? props.alignItems : 'flex-start'};
+    margin-bottom: 1em;
+    ${screens.lg} {
+        flex-direction: row;
+        margin-bottom: 0;
+    }
 `;
+
+const VerticalAlign = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
 const ProjectComponent = ({ project }: { project: TechProject }) => {
     const [showDescription, setShowDescription] = useState(false);
 
@@ -106,7 +121,8 @@ const ProjectComponent = ({ project }: { project: TechProject }) => {
         <SemiBoldText
             hover
             color={Colors.blue}
-            onClick={() => redirect(project.github as string)}>
+            onClick={() => redirect(project.github as string)}
+            >
             github
         </SemiBoldText>
     );
@@ -121,22 +137,23 @@ const ProjectComponent = ({ project }: { project: TechProject }) => {
             ) : null}
         <ProjectContainer onClick={displayProjectDetails}>
             <ProjectImage src={project.image} />
-            <TextDiv>
-                <TextDiv flexDirection="row" alignItems="center">
+            <VerticalAlign>
+                <TextDiv alignItems="center">
                     <BoldText
                         fontSize="2.25em"
                         color={Colors.yellow}
-                        marginBottom="0.25em">
+                        marginBottom="0.25em"
+                        mobileFontSize='1.5em'>
                         {project.name}
                     </BoldText>
-                    <SemiBoldText italic marginBottom="0.5em">
+                    <SemiBoldText italic marginBottom="0.5em" mobileFontSize='0.75em'>
                         {EN_SPACER}( {project.duration} )
                     </SemiBoldText>
                 </TextDiv>
-                <SemiBoldText marginBottom="0.5em">
+                <SemiBoldText marginBottom="0.5em" mobileFontSize='0.75em'>
                     {project.type.concat(SPACER).concat(project.role)}
                 </SemiBoldText>
-                <SemiBoldText marginBottom="0.5em">
+                <SemiBoldText marginBottom="0.5em" mobileFontSize='0.75em'>
                     {' '}
                     links:{EN_SPACER}
                     {frontendAndBackendOnly ? (
@@ -147,7 +164,7 @@ const ProjectComponent = ({ project }: { project: TechProject }) => {
                         <GithubOnlyComponent />
                     ) : null}
                 </SemiBoldText>
-            </TextDiv>
+            </VerticalAlign>
         </ProjectContainer>
         </>
     );
