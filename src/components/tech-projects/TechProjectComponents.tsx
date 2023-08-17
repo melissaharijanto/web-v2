@@ -7,7 +7,7 @@ export const HorizontalScroll = styled.div`
     flex-direction: column;
     
 
-    ${screens.lg} {
+    ${screens.md} {
         flex-direction: row;
         overflow-x: auto;
         white-space: nowrap;
@@ -29,9 +29,13 @@ export const ProjectContainerWrapper = styled.div`
     display: inline-flex;
     width: 100%;
     margin-bottom: 1em;
+
+    ${screens.md} {
+        margin: 3px 1em 1em 3px;
+    }
+    
     ${screens.lg} {
         width: 500px;
-        margin: 3px 1em 1em 3px;
     }
    
 `;
