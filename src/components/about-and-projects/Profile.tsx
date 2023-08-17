@@ -136,10 +136,10 @@ const Profile = () => {
           <GraphicsGrid />
         ) : figmaSelected ? (
           <SemiBoldText
+            italic
             textAlign="center"
             fontSize="1.5em"
             color={Colors.yellow}
-            italic
             mobileFontSize='0.75em'>
             coming soon
           </SemiBoldText>
