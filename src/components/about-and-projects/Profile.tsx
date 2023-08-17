@@ -23,12 +23,13 @@ export const Container = styled.div<{
     padding: 2em 2.5em 4em 2.5em;
     margin-top: 10em;
     margin-bottom: 2em;
-    // margin-left: 1.5em;
-    // margin-right: 1.5em;
+    margin-left: 1em;
+    margin-right: 1em;
     display: flex;
     flex-direction: column;
     ${screens.lg} {
-        padding: 4em 5em 8em 5em;
+        padding: 6em 7.5em 10em 7.5em;
+        margin: 10em 3em 2em 3em;
     }
 `;
 
