@@ -12,6 +12,7 @@ import { redirect } from '../constants/utils';
 const Container = styled.div`
     background: linear-gradient(${Colors.blue_50} 10%, transparent 90%);
     padding: 3em;
+    margin: 3em;
     border-radius: 20px;
     display: flex;
     justify-content: center;
