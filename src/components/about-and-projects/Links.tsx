@@ -8,12 +8,13 @@ const Links = () => {
     return (
         <>
             <TextDiv>
-                <BoldText fontSize="2.5em">about</BoldText>
+                <BoldText fontSize="2.5em" mobileFontSize='1.25em'>about</BoldText>
             </TextDiv>
             <TextDiv>
                 <BoldText
                     marginBottom="0.25em"
                     fontSize="3.5em"
+                    mobileFontSize='1.75em'
                     color={Colors.yellow}>
                     good to see you here.
                 </BoldText>
@@ -21,7 +22,8 @@ const Links = () => {
                     marginBottom="1em"
                     fontSize="1em"
                     lineHeight="1.5"
-                    textAlign="justify">
+                    textAlign="justify"
+                    mobileFontSize='0.75em'>
                     my name is melissa, and my passion for web development
                     started when i learnt basic HTML and CSS when i was 14,
                     driven by my hobby of graphic design. afterwards, i learnt
@@ -30,7 +32,7 @@ const Links = () => {
                     learn. i enjoy applying the things i learnt to the projects
                     i make or participate in.
                 </SemiBoldText>
-                <SemiBoldText fontSize="1.25em">
+                <SemiBoldText fontSize="1.25em" mobileFontSize='0.875em'>
                     <SemiBoldText
                         color={Colors.blue}
                         hover
