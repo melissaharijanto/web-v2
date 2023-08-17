@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Colors } from '../../constants/colors';
 import { SemiBoldText } from '../TextComponents';
+import { screens } from '../../constants/constants';
 
 const Grid = styled.div`
     display: grid;
@@ -16,17 +17,21 @@ const Tab = styled.div<{ backgroundColor?: string }>`
     border-style: solid solid none solid;
     border-color: ${Colors.white_75};
     border-width: 0.1em;
-    padding: 1em;
+    padding: 0.75em 1.5em;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     text-align: center;
     background: ${(props) =>
         props.backgroundColor ? props.backgroundColor : 'transparent'};
     cursor: pointer;
-    width: 75%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    ${screens.lg} {
+        width: 75%;
+        padding: 1em;
+    }
 `;
 
 const ProjectTab = ({
@@ -56,7 +61,8 @@ const ProjectTab = ({
                 <SemiBoldText
                     fontSize="1.25em"
                     color={mainSelected ? Colors.yellow : Colors.white}
-                    textAlign="center">
+                    textAlign="center"
+                    mobileFontSize='0.75em'>
                     {headingOne}
                 </SemiBoldText>
             </Tab>
@@ -70,7 +76,8 @@ const ProjectTab = ({
                 <SemiBoldText
                     fontSize="1.25em"
                     color={otherSelected ? Colors.yellow : Colors.white}
-                    textAlign="center">
+                    textAlign="center"
+                    mobileFontSize='0.75em'>
                     {headingTwo}
                 </SemiBoldText>
             </Tab>
