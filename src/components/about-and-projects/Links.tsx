@@ -32,7 +32,7 @@ const Links = () => {
                     learn. i enjoy applying the things i learnt to the projects
                     i make or participate in.
                 </SemiBoldText>
-                <SemiBoldText fontSize="1.25em" mobileFontSize='0.875em'>
+                <SemiBoldText fontSize="1.25em" mobileFontSize='0.75em'>
                     <SemiBoldText
                         color={Colors.blue}
                         hover
