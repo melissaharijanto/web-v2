@@ -5,14 +5,26 @@ import YuzuruHanyu from '../../resources/images/graphics/yuzuru-hanyu.png';
 import { SemiBoldText } from '../TextComponents';
 import { Colors } from '../../constants/colors';
 import { toBehance } from '../../constants/links';
-import { EM_DASH, NORMAL_SPACE } from '../../constants/constants';
+import { EM_DASH, NORMAL_SPACE, screens } from '../../constants/constants';
 
 const Grid = styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 1em;
+
+    ${screens.lg} {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 `;
+
+const NotVisibleIfMobile = styled.div`
+    display: none;
+
+    ${screens.lg} {
+        display: block;
+    }
+`
 
 const Image = styled.img`
     width: 100%;
@@ -45,9 +57,9 @@ const GraphicsGrid = () => {
                 <div>
                     <Image src={JPop} />
                 </div>
-                <div>
+                <NotVisibleIfMobile>
                     <Image src={YuzuruHanyu} />
-                </div>
+                </NotVisibleIfMobile>
             </Grid>
         </>
     );
