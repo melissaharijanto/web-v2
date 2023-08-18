@@ -24,7 +24,7 @@ export const experiences: Experience[] = [
         type: 'part-time work',
         period: 'jan 2023 - may 2023',
         job_description: [
-            'subject: cs2030s (programming methodology II, object-oriented programming) and cs2103t (software engineering)',
+            'subjects taught: cs2030s (programming methodology II, object-oriented programming) and cs2103t (software engineering)',
         ],
     },
     {
