@@ -38,7 +38,7 @@ const ExperienceTab = ({ experience }: { experience: Experience }) => {
                 </TitleDiv>
                 <TitleDiv>
                     {experience.job_description.map((task) =>(
-                        <SemiBoldText fontSize='0.75em' lineHeight='1.5' textAlign='justify'>{BULLET_POINT} {task}</SemiBoldText>
+                        <SemiBoldText mobileFontSize='0.75em' lineHeight='1.5' textAlign='justify'>{BULLET_POINT} {task}</SemiBoldText>
                     )
                     )}
                 </TitleDiv>
