@@ -6,7 +6,7 @@ For v1, view it in this <a href="https://github.com/melissaharijanto/website-v1"
 
 <img src="./src/resources/images/website-preview.gif" width=100% />
 
-**Note: This site is best viewed in desktop!**
+**Note: This site is best viewed in desktop! (but it is mobile responsive, so no worries :smile:)**
 
 Some features of the site:
 - The website displays (work) experience and activities!
@@ -18,7 +18,7 @@ Things I experimented with (and liked):
 - Navbar background to blur on scroll :heartpulse:
 
 To be implemented soon: 
-- Mobile responsiveness :iphone:
+- ~~Mobile responsiveness :iphone:~~ (**latest update: finished implementing!** :smile:)
 
 ## inspiration & acknowledgement
 
