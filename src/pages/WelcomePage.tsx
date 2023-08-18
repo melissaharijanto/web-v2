@@ -97,14 +97,6 @@ const WelcomePage = () => {
             {NORMAL_SPACE}for design inspiration.
           </RegularText>
         </RegularText>
-        <RegularText
-          marginBottom="0.75em"
-          fontSize="0.875em"
-          mobileFontSize="0.75em">
-          <RegularText>best viewed in{NORMAL_SPACE}</RegularText>
-          <RegularText color={Colors.pink}>desktop</RegularText>
-          <RegularText>.</RegularText>
-        </RegularText>
       </Container>
     </WelcomePageBackground>
   );
