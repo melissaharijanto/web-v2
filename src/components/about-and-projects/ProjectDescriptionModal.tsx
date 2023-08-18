@@ -30,7 +30,7 @@ const FixedDiv = styled.div`
     left: 50%;
     padding: 2em;
     position: fixed;
-    width: 75vw;
+    width: 50vw;
     text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
