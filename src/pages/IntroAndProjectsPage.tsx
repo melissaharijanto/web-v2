@@ -4,7 +4,7 @@ import Profile from '../components/about-and-projects/Profile';
 
 
 export const ContentDiv = styled.div`
-    width: 85%;
+    width: 100%;
 `;
 
 const IntroAndProjectsPage = () => {

@@ -3,7 +3,7 @@ import { Colors } from '../../constants/colors';
 import { TechProject } from '../../constants/tech-projects';
 import CloseIcon from '@mui/icons-material/Close';
 import { BoldText, RegularText, SemiBoldText } from '../TextComponents';
-import { BULLET_POINT, EM_DASH, NORMAL_SPACE } from '../../constants/constants';
+import { BULLET_POINT, EM_DASH, NORMAL_SPACE, screens } from '../../constants/constants';
 import { ProjectImage } from './ProjectComponent';
 import { redirect } from '../../constants/utils';
 
@@ -30,10 +30,14 @@ const FixedDiv = styled.div`
     left: 50%;
     padding: 2em;
     position: fixed;
-    width: 25vw;
+    width: 50vw;
     text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
+    white-space: pre-wrap;
+    ${screens.lg} {
+        width: 25vw;
+    }
 `;
 
 const CloseIconDiv = styled.div`
@@ -61,7 +65,8 @@ const ProjectDescriptionModal = ({
                 <BoldText
                     marginBottom="0.5em"
                     color={Colors.pink}
-                    fontSize="1.125em">
+                    fontSize="1.125em"
+                    mobileFontSize='0.75em'>
                     download link:{NORMAL_SPACE}
                 </BoldText>
                 <SemiBoldText
@@ -69,7 +74,8 @@ const ProjectDescriptionModal = ({
                     hover
                     hoverColor={Colors.blue_75}
                     color={Colors.blue}
-                    onClick={() => redirect(project.download!)}>
+                    onClick={() => redirect(project.download!)}
+                    mobileFontSize='0.75em'>
                     here
                 </SemiBoldText>
             </DeploymentOrDownloadDiv>
@@ -81,7 +87,9 @@ const ProjectDescriptionModal = ({
                 <BoldText
                     marginBottom="0.5em"
                     color={Colors.pink}
-                    fontSize="1.125em">
+                    fontSize="1.125em"
+                    mobileFontSize='0.75em'
+                    >
                     deployment link:{NORMAL_SPACE}
                 </BoldText>
                 <SemiBoldText
@@ -89,7 +97,8 @@ const ProjectDescriptionModal = ({
                     hover
                     hoverColor={Colors.blue_75}
                     color={Colors.blue}
-                    onClick={() => redirect(project.deployment!)}>
+                    onClick={() => redirect(project.deployment!)}
+                    mobileFontSize='0.75em'>
                     here
                 </SemiBoldText>
             </DeploymentOrDownloadDiv>
@@ -101,12 +110,13 @@ const ProjectDescriptionModal = ({
                 <BoldText
                     marginBottom="0.5em"
                     color={Colors.pink}
-                    fontSize="1.125em">
+                    fontSize="1.125em"
+                    mobileFontSize='0.75em'>
                     my contributions:
                 </BoldText>
             ) : null}
             {project.contribution?.map((contribution) => (
-                <SemiBoldText marginBottom="0.75em">
+                <SemiBoldText marginBottom="0.75em" mobileFontSize='0.75em'>
                     {BULLET_POINT} {contribution}
                 </SemiBoldText>
             ))}
@@ -122,24 +132,26 @@ const ProjectDescriptionModal = ({
                 <BoldText
                     color={Colors.yellow}
                     fontSize="2em"
-                    marginBottom="0.25em">
+                    marginBottom="0.25em"
+                    mobileFontSize='1.5em'>
                     {project.name}
                 </BoldText>
-                <SemiBoldText marginBottom="0.5em">
+                <SemiBoldText marginBottom="0.5em" mobileFontSize='0.75em'>
                     {project.role} {EM_DASH} {project.duration}
                 </SemiBoldText>
-                <RegularText marginBottom="1em" italic>
+                <RegularText marginBottom="1em" italic mobileFontSize='0.75em'>
                     {project.type}
                 </RegularText>
                 <ProjectImage src={project.image} />
                 <BoldText
                     marginBottom="0.5em"
                     color={Colors.pink}
-                    fontSize="1.125em">
+                    fontSize="1.125em"
+                    mobileFontSize='0.75em'>
                     tech stack used:{' '}
                 </BoldText>
                 {project.tech_stack.map((techStack) => (
-                    <SemiBoldText marginBottom="0.5em">
+                    <SemiBoldText marginBottom="0.5em" mobileFontSize='0.75em'>
                         {BULLET_POINT} {techStack}
                     </SemiBoldText>
                 ))}

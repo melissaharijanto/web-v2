@@ -30,6 +30,12 @@ code {
 }
 
 @font-face {
+    font-family: 'Metropolis-SemiBoldItalic';
+    src: local('Metropolis-SemiBoldItalic'),
+        url('./resources/fonts/Metropolis-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'Metropolis-Bold';
     src: local('Metropolis-Bold'),
         url('./resources/fonts/Metropolis-Bold.ttf') format('truetype');

@@ -7,12 +7,17 @@ import { experiences } from '../constants/work-experience';
 import { Container, TextDiv } from '../components/about-and-projects/Profile';
 import ExperienceHeader from '../components/experience-components/ExperienceHeader';
 import JobHeader from '../components/experience-components/TitleHeading';
+import { screens } from '../constants/constants';
 
 const WhiteLine = styled.hr`
-    width: 100%;
-    background-color: ${Colors.white_75};
-    border: 0;
-    height: 1px;
+    display: none;
+    ${screens.md} {
+        display: flex;
+        width: 100%;
+        background-color: ${Colors.white_75};
+        border: 0;
+        height: 1px;
+    }
 `
 
 const ExperienceTabWrapper = styled.div`
@@ -26,7 +31,6 @@ const ExperiencePage = () => {
             <ContentDiv>
                 <Container gradientColor={Colors.purple}>
                     <ExperienceHeader/>
-                    <TextDiv/>
                     <TextDiv/>
                     <JobHeader/>
                     <WhiteLine/>

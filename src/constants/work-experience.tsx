@@ -13,8 +13,9 @@ export const experiences: Experience[] = [
         type: 'internship - full-time',
         period: 'may 2023 - present',
         job_description: [
-            'write test cases and conduct user acceptance testing for the fraud management system',
-            'more to be added...',
+            'write test cases and conduct user acceptance testing for a fraud management system',
+            'conduct automated integration and unit testing with tricentis tosca',
+            'write custom functions in vba excel to aid with analyzing downtime data of ocbc internal applications',
         ],
     },
     {
@@ -23,10 +24,7 @@ export const experiences: Experience[] = [
         type: 'part-time work',
         period: 'jan 2023 - may 2023',
         job_description: [
-            'subject: cs2030s',
-            'conduct weekly lab sessions for 14 students',
-            'create powerpoint slides to aid in teaching',
-            "grade assignments and give constructive comments for the students' future improvement",
+            'subjects taught: cs2030s (programming methodology II, object-oriented programming) and cs2103t (software engineering)',
         ],
     },
     {
