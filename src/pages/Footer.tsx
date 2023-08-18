@@ -16,7 +16,7 @@ const FooterDiv = styled.div`
 `;
 
 const Logo = styled.img`
-    width: 20vw;
+    width: 15vw;
     ${screens.md} {
         width: 7.5vw;
     }
