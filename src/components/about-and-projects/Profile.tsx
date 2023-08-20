@@ -9,6 +9,7 @@ import MainTechProjects from '../tech-projects/MainTechProjects';
 import OtherTechProjects from '../tech-projects/OtherTechProjects';
 import { Colors } from '../../constants/colors';
 import { screens } from '../../constants/constants';
+import FigmaProjects from '../design-projects/FigmaProjects';
 
 export const Container = styled.div<{
   marginLeft?: string;
@@ -135,14 +136,15 @@ const Profile = () => {
         graphicsSelected ? (
           <GraphicsGrid />
         ) : figmaSelected ? (
-          <SemiBoldText
-            italic
-            textAlign="center"
-            fontSize="1.5em"
-            color={Colors.yellow}
-            mobileFontSize='0.75em'>
-            coming soon
-          </SemiBoldText>
+          // <SemiBoldText
+          //   italic
+          //   textAlign="center"
+          //   fontSize="1.5em"
+          //   color={Colors.yellow}
+          //   mobileFontSize='0.75em'>
+          //   coming soon
+          // </SemiBoldText>
+          <FigmaProjects/>
         ) : null
       ) : null}
       <TextDiv />
