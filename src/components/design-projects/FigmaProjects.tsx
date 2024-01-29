@@ -60,7 +60,7 @@ const FigmaProjects = () => {
             <DesktopOnly>
                 <SemiBoldText marginTop="1em" fontSize="1.25em">
                     Check out my other prototypes:{EN_SPACER}
-                    <SemiBoldText color={Colors.blue}  hover hoverColor={Colors.blue_75} onClick={() => redirect("https://www.figma.com/file/CKGloIToiN5VlPJoaYpxCx/Travel-Log---Clean?type=design&mode=design&t=swl9MEF8UObXjxwI-1")}>
+                    <SemiBoldText color={Colors.blue} hover hoverColor={Colors.blue_75} onClick={() => redirect("https://www.figma.com/file/CKGloIToiN5VlPJoaYpxCx/Travel-Log---Clean?type=design&mode=design&t=swl9MEF8UObXjxwI-1")}>
                         travelLog
                     </SemiBoldText>
                 </SemiBoldText>
